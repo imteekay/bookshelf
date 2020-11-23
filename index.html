@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>My Bookshelf</h1>
+    <p class='by-tk'>by TK</p>
+    <hr class='divider-for-tk'>
+
+    <div id="app">
+      <div v-for="(books, year) in booksPerYear">
+        <h2>{{ year }}</h2>
+        <ul>
+          <li v-for="book in books">
+            <span class='book-read' v-if="book.read">
+              <i class="fa fa-check"></i>
+            </span>
+            <b>
+              <a
+                :href="book.url"
+                target='_blank'
+              >
+                {{ book.title }}
+              </a>
+            </b>
+            by {{ book.author }}
+            <span class="medium-post" v-if="book.hasMediumPost">
+              <a :href="book.mediumPostUrl">
+                <i class='fa fa-medium'></i>
+              </a>
+            </span>
+          </li>
+        </ul>
+
+        <hr class="divider">
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
