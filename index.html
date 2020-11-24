@@ -16,23 +16,16 @@
         <h2>{{ year }}</h2>
         <ul>
           <li v-for="book in books">
-            <span class='book-read' v-if="book.read">
-              <i class="fa fa-check"></i>
-            </span>
-            <b>
-              <a
-                :href="book.url"
-                target='_blank'
-              >
-                {{ book.title }}
-              </a>
-            </b>
-            by {{ book.author }}
-            <span class="medium-post" v-if="book.hasMediumPost">
-              <a :href="book.mediumPostUrl">
-                <i class='fa fa-medium'></i>
-              </a>
-            </span>
+            <book-check v-bind:read="book.read"></book-check>
+            <book
+              v-bind:title="book.title"
+              v-bind:author="book.author"
+              v-bind:url="book.url"
+            ></book>
+            <book-article
+              v-bind:hasArticle="book.hasArticle"  
+              v-bind:articleUrl="book.articleUrl"  
+            /></book-article>
           </li>
         </ul>
 
