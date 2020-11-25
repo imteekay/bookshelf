@@ -92,7 +92,12 @@ const App = {
 const app = Vue.createApp(App);
 
 app.component('book-check', {
-  props: ['read'],
+  props: {
+    read: {
+      type: Boolean,
+      required: true,
+    },
+  },
   template: `
     <span class='book-read' v-if="read">
       <i class="fa fa-check"></i>
@@ -101,7 +106,20 @@ app.component('book-check', {
 });
 
 app.component('book', {
-  props: ['title', 'author', 'url'],
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    author: {
+      type: String,
+      required: true,
+    },
+    url: {
+      type: String,
+      required: true,
+    }
+  },
   template: `
     <b>
       <a
