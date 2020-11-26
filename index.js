@@ -289,7 +289,7 @@ app.component('book', {
       <book-article
         v-bind:has-article="hasArticle"  
         v-bind:article-url="articleUrl"  
-      /></book-article>
+      ></book-article>
     </li>
   `,
 });
