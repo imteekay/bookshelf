@@ -9,26 +9,13 @@
   <body>
     <h1>My Bookshelf</h1>
     <p class='by-tk'>by TK</p>
-    <hr class='divider-for-tk'>
 
     <div id="app">
-      <div v-for="(books, year) in booksPerYear">
-        <h2>{{ year }}</h2>
-        <ul>
-          <book
-            v-for="book in books"
-            v-bind:read="book.read"
-            v-bind:title="book.title"
-            v-bind:author="book.author"
-            v-bind:url="book.url"
-            v-bind:has-article="book.hasArticle"
-            v-bind:article-url="book.articleUrl"
-            v-bind:key="book.url"
-          ></book>
-        </ul>
-
-        <hr class="divider">
-      </div>
+      <books-per-year
+        v-for="[year, books] in booksPerYear"
+        v-bind:books="books"
+        v-bind:year="year"
+      ></books-per-year>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
