@@ -15,18 +15,16 @@
       <div v-for="(books, year) in booksPerYear">
         <h2>{{ year }}</h2>
         <ul>
-          <li v-for="book in books">
-            <book-check v-bind:read="book.read"></book-check>
-            <book
-              v-bind:title="book.title"
-              v-bind:author="book.author"
-              v-bind:url="book.url"
-            ></book>
-            <book-article
-              v-bind:has-article="book.hasArticle"  
-              v-bind:article-url="book.articleUrl"  
-            /></book-article>
-          </li>
+          <book
+            v-for="book in books"
+            v-bind:read="book.read"
+            v-bind:title="book.title"
+            v-bind:author="book.author"
+            v-bind:url="book.url"
+            v-bind:has-article="book.hasArticle"
+            v-bind:article-url="book.articleUrl"
+            v-bind:key="book.url"
+          ></book>
         </ul>
 
         <hr class="divider">

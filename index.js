@@ -105,7 +105,7 @@ app.component('book-check', {
   `,
 });
 
-app.component('book', {
+app.component('book-info', {
   props: {
     title: {
       type: String,
@@ -150,6 +150,43 @@ app.component('book-article', {
         <i class='fa fa-medium'></i>
       </a>
     </span>
+  `,
+});
+
+app.component('book', {
+  props: {
+    read: {
+      type: Boolean,
+    },
+    title: {
+      type: String,
+    },
+    author: {
+      type: String,
+    },
+    url: {
+      type: String,
+    },
+    hasArticle: {
+      type: Boolean,
+    },
+    articleUrl: {
+      type: String,
+    },
+  },
+  template: `
+    <li>
+      <book-check v-bind:read="read"></book-check>
+      <book-info
+        v-bind:title="title"
+        v-bind:author="author"
+        v-bind:url="url"
+      ></book-info>
+      <book-article
+        v-bind:has-article="hasArticle"  
+        v-bind:article-url="articleUrl"  
+      /></book-article>
+    </li>
   `,
 });
 
