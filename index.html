@@ -1,24 +1,15 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <h1>My Bookshelf</h1>
-    <p class='by-tk'>by TK</p>
-
-    <div id="app">
-      <books-per-year
-        v-for="[year, books] in booksPerYear"
-        v-bind:books="books"
-        v-bind:year="year"
-      ></books-per-year>
-    </div>
-
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+  <title>TK's Digital Bookshelf</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
