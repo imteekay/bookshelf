@@ -6,7 +6,10 @@
 export default {
   name: 'Title',
   props: {
-    text: String
+    text: {
+      type: String,
+      required: true,
+    }
   },
 }
 </script>

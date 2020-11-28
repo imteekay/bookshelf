@@ -1,6 +1,9 @@
 <template>
-  <span class='book-read' v-if="read">
-    <i class="fa fa-check"></i>
+  <span
+    v-if="read"
+    class="book-read"
+  >
+    <i class="fa fa-check" />
   </span>
 </template>
 

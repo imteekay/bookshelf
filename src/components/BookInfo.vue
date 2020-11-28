@@ -2,7 +2,7 @@
   <b>
     <a
       :href="url"
-      target='_blank'
+      target="_blank"
     >
       {{ title }}
     </a>

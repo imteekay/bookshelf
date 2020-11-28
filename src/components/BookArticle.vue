@@ -1,7 +1,10 @@
 <template>
-  <span class="medium-post" v-if="hasArticle">
+  <span
+    v-if="hasArticle"
+    class="medium-post"
+  >
     <a :href="articleUrl">
-      <i class='fa fa-medium'></i>
+      <i class="fa fa-medium" />
     </a>
   </span>
 </template>

@@ -1,15 +1,15 @@
 <template>
   <li>
-    <BookCheck v-bind:read="read"></BookCheck>
+    <BookCheck :read="read" />
     <BookInfo
-      v-bind:title="title"
-      v-bind:author="author"
-      v-bind:url="url"
-    ></BookInfo>
+      :title="title"
+      :author="author"
+      :url="url"
+    />
     <BookArticle
-      v-bind:has-article="hasArticle"  
-      v-bind:article-url="articleUrl"  
-    ></BookArticle>
+      :has-article="hasArticle"  
+      :article-url="articleUrl"  
+    />
   </li>
 </template>
 
@@ -31,18 +31,23 @@ export default {
     },
     title: {
       type: String,
+      required: true,
     },
     author: {
       type: String,
+      required: true,
     },
     url: {
       type: String,
+      required: true,
     },
     hasArticle: {
       type: Boolean,
+      required: true,
     },
     articleUrl: {
       type: String,
+      required: true,
     },
   },
 }

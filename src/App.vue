@@ -3,9 +3,9 @@
   <BookshelfAuthor text="by TK" />
   <BooksPerYear
     v-for="[year, books] in booksPerYear"
-    v-bind:books="books"
-    v-bind:year="year"
-    v-bind:key="year"
+    :key="year"
+    :books="books"
+    :year="year"
   />
 </template>
 

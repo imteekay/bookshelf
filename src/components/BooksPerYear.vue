@@ -4,14 +4,14 @@
   <ul>
     <Book
       v-for="book in books"
-      v-bind:read="book.read"
-      v-bind:title="book.title"
-      v-bind:author="book.author"
-      v-bind:url="book.url"
-      v-bind:has-article="book.hasArticle"
-      v-bind:article-url="book.articleUrl"
-      v-bind:key="book.url"
-    ></Book>
+      :key="book.url"
+      :read="book.read"
+      :title="book.title"
+      :author="book.author"
+      :url="book.url"
+      :has-article="book.hasArticle"
+      :article-url="book.articleUrl"
+    />
   </ul>
 </template>
 
@@ -26,9 +26,11 @@ export default {
   props: {
     year: {
       type: Number,
+      required: true,
     },
     books: {
       type: Array,
+      required: true,
     },
   },
 }

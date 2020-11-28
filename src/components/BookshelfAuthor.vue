@@ -1,5 +1,7 @@
 <template>
-  <p class='by-tk'>{{ text }}</p>
+  <p class="by-tk">
+    {{ text }}
+  </p>
 </template>
 
 <script>
