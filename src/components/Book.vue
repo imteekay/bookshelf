@@ -1,15 +1,8 @@
 <template>
   <li>
     <BookCheck :read="read" />
-    <BookInfo
-      :title="title"
-      :author="author"
-      :url="url"
-    />
-    <BookArticle
-      :has-article="hasArticle"  
-      :article-url="articleUrl"  
-    />
+    <BookInfo :title="title" :author="author" :url="url" />
+    <BookArticle :has-article="hasArticle" :article-url="articleUrl" />
   </li>
 </template>
 
@@ -50,7 +43,7 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>
 
 <style scoped>

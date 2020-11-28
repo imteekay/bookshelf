@@ -1,9 +1,6 @@
 <template>
   <b>
-    <a
-      :href="url"
-      target="_blank"
-    >
+    <a :href="url" target="_blank">
       {{ title }}
     </a>
   </b>
@@ -25,7 +22,7 @@ export default {
     url: {
       type: String,
       required: true,
-    }
-  },  
-}
+    },
+  },
+};
 </script>

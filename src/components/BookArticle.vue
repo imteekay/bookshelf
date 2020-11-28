@@ -1,8 +1,5 @@
 <template>
-  <span
-    v-if="hasArticle"
-    class="medium-post"
-  >
+  <span v-if="hasArticle" class="medium-post">
     <a :href="articleUrl">
       <i class="fa fa-medium" />
     </a>
@@ -20,9 +17,9 @@ export default {
     articleUrl: {
       type: String,
       required: true,
-    }
-  },  
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -31,6 +28,6 @@ span.medium-post {
 }
 
 .fa-medium {
-  color: #0BE370;
+  color: #0be370;
 }
 </style>

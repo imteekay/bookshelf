@@ -1,5 +1,5 @@
 <template>
-  <hr class="divider">
+  <hr class="divider" />
   <h2>{{ year }}</h2>
   <ul>
     <Book
@@ -33,7 +33,7 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>
 
 <style scoped>

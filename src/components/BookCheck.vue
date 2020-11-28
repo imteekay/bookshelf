@@ -1,8 +1,5 @@
 <template>
-  <span
-    v-if="read"
-    class="book-read"
-  >
+  <span v-if="read" class="book-read">
     <i class="fa fa-check" />
   </span>
 </template>
@@ -16,13 +13,13 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>
 
 <style scoped>
 span.book-read {
   margin-right: 5px;
-  color: #0BE370;
+  color: #0be370;
   display: inline-block;
 }
 </style>
