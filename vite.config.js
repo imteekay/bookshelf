@@ -1,3 +1,3 @@
 module.exports = {
-  root: '/bookshelf/',
+  root: process.env.NODE_ENV === 'production' ? '/bookshelf/' : '/',
 };
